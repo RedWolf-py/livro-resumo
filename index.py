@@ -44,6 +44,11 @@ def index():
     if livro:
         filename = secure_filename(livro.filename)
         livro_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        
+    
+        if not os.path.exists(app.config['UPLOAD_FOLDER']):
+            os.makedirs(app.config['UPLOAD_FOLDER'])
+        
         livro.save(livro_path)
     
         resposta = get_resposta(livro_path, pergunta)
@@ -56,6 +61,7 @@ def index():
            return redirect(url_for('error'))
     else:
         return "Nenhum arquivo enviado."
+
 
 @app.route('/resposta')
 def resposta():
