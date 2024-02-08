@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+body {
+    padding: 0%;
+    margin: 0%;
+
+}
+
+.corpo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corpo img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.corpoflex {
+    position: absolute;
+    top: 70px;
+    width: 50%;
+    height: 80%;
+    backdrop-filter: blur(4px);
+    background-color: rgba(2, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+
+.corpoflex img {
+    position: relative;
+    margin-top: 44%;
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+    background-size: cover;
+
+}
+
+
+.raioLuz {
+    width: 10%;
+    height: 30%;
+    position: absolute;
+    top: 9%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.raioLuz::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 45%;
+    background-color: #f8f2f6;
+
+    transform: perspective(3px) rotateX(16deg) scale(0.5, 0.300);
+    filter: blur(3px);
+    opacity: 0.9;
+
+}
+
+.formDiv {
+    margin-top: 25px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+}
+
+.titulo {
+    color: rgb(253, 252, 253);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+
+}
+
+.subtitulo {
+  
+    color: rgb(253, 252, 253);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    margin-bottom: 30px;
+
+
+}
+
+
+.respUser {
+    margin-top: 40px;
+    margin: 50px;
+    font-size: 1.3rem;
+    border: 1px red;
+
+}
+
+.inputs label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(204, 9, 9);
+    font-size: 1.8rem;
+    z-index: 2;
+    font-family: arial black;
+}
+
+.inputs input[type="text"] {
+    width: 100%;
+    padding: 6px;
+    border: 2px solid #6b6060;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+
+}
+
+
+
+
+.btn {
+    margin-top: 20px;
+    margin-left: 25%;
+    width: 14px;
+    transform: translate(-50, -50);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: rgb(206, 2, 2);
+    background: -webkit-linear-gradient(to right, 206, 2, 2, #000046);
+    background: linear-gradient(to right, rgb(250, 7, 7), #1717f7);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 3rem;
+    padding-right: 6rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: color 1s;
+
+
+}
+
+.btn:hover {
+    color: hsl(0, 60%, 2%);
+
+    background: -webkit-linear-gradient(to right, 206, 2, 2, #6262f8);
+    background: linear-gradient(to right, rgb(247, 70, 70), #6262f8);
+    transition: color 1s
+}
+
+.mensagem {
+    top: 20px;
+    position: absolute;
+    text-align: center;
+    color: rgb(250, 247, 247);
+    z-index: 4; 
+    font-size: 2rem;
+    border-bottom: 2px solid rgb(204, 9, 9);
+    display: inline-block; 
+    padding-bottom: 2px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: none;
+ 
+}
+
+.mensagem::after{
+    content: '|';
+    color: rgb(250, 245, 245);
+    animation: piscar .7s infinite;
+   
+}
+
+@keyframes piscar{
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+/*segundo html*/
+.subTexto {
+    margin: 40px;
+    background-color: #faf7f7;
+    padding: 3px;
+
+}
+
+.respUser h1 {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: black;
+    margin: 0%;
+    padding: 0%;
+}
+
+/*terceiro html*/
+
+.subTextoError {
+    margin: 50px;
+    background-color: #faf7f7;
+    padding: 10px;
+
+}
+
+.respUserError h2 {
+    margin-left: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}

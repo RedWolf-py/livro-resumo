@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Biblioteca</title>
+</head>
+
+<body>
+    <form action="/index" id="index" method="post" enctype="multipart/form-data">
+        <div class="corpo">
+            <div class="mensagem">Por favor <span>aguarde...</span></div>
+            <img src="/static/img/biblioteca.jpg">
+            <div class="corpoflex">
+                <div class="raioLuz"></div>
+                <img src="/static/img/livro.png">
+                <div class="formDiv">
+
+                    <h4 class="titulo">Bem Vindos(as)</h4>
+                    <h4 class="subtitulo">Aqui as respostas vão até você !</h4>
+
+                    <div class="inputs">
+                        <label for="files">Carregue o livro
+                            <input id="files" name="files" type="file">
+                        </label>
+                    </div>
+                    <div class="inputs">
+                        <label for="pergunta">Sua Pergunta
+                            <input id="pergunta" name="pergunta" type="text" placeholder="digite sua pergunta">
+                        </label>
+                    </div>
+                    <button class="btn" type="submit">Buscar</button>
+
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="/static/javascript/script.js"></script>
+</body>
+
+</html>
