@@ -332,30 +332,41 @@ body {
   
     /*segundo html*/
 
-    .body{
+    .body {
         background-color: black;
         width: 100vw;
-        height: 100vw;
-        margin: 0%;
-       
+        height: 100vh; 
+        overflow: auto;
     }
     .subTexto {
-        position: absolute;
+        margin-left: 34px;
         width: 80%;
         height: 90%;
-        background-color: #faf7f7;
-        
+        border-radius: 10px;
     }
     .respUser h1 {
-        text-align: center;
+        margin-top: -40px;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     .respUser p {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 1.3rem;
-        padding: 0%;
+        text-align:start;
+    
     }
+   
 
-
+    .subTextoError {
+        margin-left: 30px;
+        width: 80%;
+        height: 80%;
+        border-radius: 10px;
+    }
+    .respUserError h2 {
+        margin-left: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.2rem;
+    }
+    
 }
