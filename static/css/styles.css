@@ -85,8 +85,27 @@ body {
 
 }
 
+.titulo::after {
+    content: "help?";
+    position: absolute;
+    color: rgb(250, 245, 245);
+    font-size: 1.2rem;
+    margin-left: 100px;
+    border-radius: 50%;
+    text-transform: lowercase;
+    padding: 10px;
+    opacity: 1;
+    height: 250px;
+}
+
+
+.titulo:hover:after {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+
 .subtitulo {
-  
     color: rgb(253, 252, 253);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -158,29 +177,48 @@ body {
     transition: color 1s
 }
 
+
+.formDiv::before {
+    position: absolute;
+    content: attr(data-text);
+    color: rgb(250, 245, 245);
+    font-size: 1.2rem;
+    margin-left: 360px;
+    margin-top: 20px;
+    width: 140px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+}
+
+.formDiv:hover::before {
+    opacity: 1;
+}
+
+
 .mensagem {
     top: 20px;
     position: absolute;
     text-align: center;
     color: rgb(250, 247, 247);
-    z-index: 4; 
+    z-index: 4;
     font-size: 2rem;
     border-bottom: 2px solid rgb(204, 9, 9);
-    display: inline-block; 
+    display: inline-block;
     padding-bottom: 2px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: none;
- 
+
 }
 
-.mensagem::after{
+.mensagem::after {
     content: '|';
     color: rgb(250, 245, 245);
     animation: piscar .7s infinite;
-   
+
 }
 
-@keyframes piscar{
+@keyframes piscar {
     0% {
         opacity: 1;
     }
@@ -188,12 +226,21 @@ body {
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 
 }
 
+
+.interrogacao {
+    position: relative;
+    color: #f8f2f6;
+    font-size: 2rem;
+    margin-left: 97%;
+
+}
 
 /*segundo html*/
 .subTexto {
@@ -226,5 +273,62 @@ body {
 .respUserError h2 {
     margin-left: 100px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
+
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .corpo {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+      
+    }
+
+    .corpo img {
+
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 500px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+
+    }
+
+    .corpoflex {
+
+        position: absolute;
+        top: 100px;
+        height: 60%;
+        width: 80%;
+        backdrop-filter: blur(4px);
+        background-color: rgba(2, 0, 0, 0.5);
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+
+
+    .corpoflex img {
+        position: absolute;
+        left: 10px;
+        top: 72%;
+        width: 300px;
+        height: 26%;
+        border-radius: 10px;
+        align-items: center;
+        background-size: cover;
+    }
+  
+
 }
